@@ -28,10 +28,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             <p>The time is currently <?php echo date("H:i:s A"); ?></p>
             <a href="index.php">Go Back</a>
         <?php else: ?>
-            <h1>Welcome</h1>
+            <h1>Welcome!</h1>
             <form action="index.php" method="post">
                 <input type="text" name="username" placeholder="Enter your name" required>
-                <button type="submit">Greet Me</button>
+                <button type="submit">Submit</button>
             </form>
         <?php endif; ?>
     </div>

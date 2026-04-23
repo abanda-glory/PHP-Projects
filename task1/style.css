@@ -16,10 +16,10 @@ body {
 
 
 .container {
-    background: #ffffff;
+    background: #e27bbb;
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(218, 142, 184, 0.1);
     text-align: center;
     width: 100%;
     max-width: 450px;
@@ -32,13 +32,13 @@ body {
 
 h1 {
     font-size: 2rem;
-    margin-bottom: 10px;
-    color: #2c3e50;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
 }
 
 p {
     margin-bottom: 25px;
-    color: #7f8c8d;
+    color: #e8eff0;
 }
 
 form {
@@ -57,11 +57,11 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
-    border-color: #3498db; /* Professional blue highlight */
+    border-color: #d3cbcb; /* Professional blue highlight */
 }
 
 button {
-    background-color: #3498db;
+    background-color: rgb(114, 114, 206);
     color: white;
     padding: 12px;
     border: none;
@@ -73,7 +73,7 @@ button {
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #55a7df;
 }
 
 button:active {
