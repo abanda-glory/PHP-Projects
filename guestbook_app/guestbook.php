@@ -77,14 +77,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             foreach ($messages as $entry) {
                 echo "<div class='entry-card' style='border: 1px solid #eee; padding: 10px; margin-bottom: 10px;'>";
 
-                // 1. Check if the 'image' key in THIS entry has a value
                 if (!empty($entry['image'])) {
-                    // Echo the img tag using $entry['image'] as the src
                     echo "<img src='" . $entry['image'] . "' width='70' style='border-radius:50%;'><br>";
                 }
 
-                // 2. Output the Name and the Message
-                // Use htmlspecialchars() to prevent XSS!
+
                 echo "<strong>" . htmlspecialchars($entry['name']) . "</strong><br>";
                 echo "<p>" . htmlspecialchars($entry['message']) . "</p>";
                 echo "<small>Posted on: " . $entry['date'] . "</small>";
