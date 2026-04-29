@@ -14,7 +14,7 @@ class QuoteSeeder extends Seeder
     public function run(): void
     {
         Quote::create([
-            'content' => 'Success is the sum of sum of small efforts repeated daily.',
+            'content' => 'Success is the sum of small efforts repeated daily.',
             'author' => 'Robert Collier',
         ]);
 
