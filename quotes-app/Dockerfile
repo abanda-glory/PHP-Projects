@@ -20,14 +20,17 @@ WORKDIR /app
 # Copy project files
 COPY . .
 
-# Install dependencies
+# Install Laravel dependencies
 RUN composer install --no-dev --optimize-autoloader
 
-# Generate Laravel cache
-RUN php artisan config:cache
+# Clear config cache so Render env vars are loaded at runtime
+RUN php artisan config:clear
 
-# Expose port
+# Fix Laravel writable directories
+RUN chmod -R 777 storage bootstrap/cache
+
+# Expose Render port
 EXPOSE 10000
 
-# Start Laravel
+# Start Laravel from public directory
 CMD php -S 0.0.0.0:10000 -t public
