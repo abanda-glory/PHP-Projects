@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('quotes', function (Blueprint $table) {
             $table->id();
+            $table->text('content');
+            $table->string('author')->nullable();
             $table->timestamps();
         });
     }
