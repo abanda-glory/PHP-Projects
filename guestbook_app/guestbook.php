@@ -51,8 +51,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <?php if (isset($_SESSION['flash'])): ?>
             <h3><?php echo $_SESSION['flash']; ?></h3>
             <?php unset($_SESSION['flash']); ?>
-        <?php else : ?>
-            <h3><?php echo "Please submit a message"; ?></h3>
         <?php endif ?>
         <form action="guestbook.php" method="post" enctype="multipart/form-data">
             <label for="name">Name</label>
