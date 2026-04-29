@@ -36,6 +36,6 @@ This project is designed as a simple 1-page motivational quotes app.
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/php_projects.git
+git clone https://github.com/abanda-glory/PHP-Projects.git
 cd php_projects/quotes-app
 ```
