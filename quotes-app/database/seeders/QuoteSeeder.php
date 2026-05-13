@@ -2,30 +2,50 @@
 
 namespace Database\Seeders;
 
-use App\Models\Quote;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Quote;
 
 class QuoteSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        Quote::create([
-            'content' => 'Success is the sum of small efforts repeated daily.',
-            'author' => 'Robert Collier',
-        ]);
+        $quotes = [
+            [
+                'content' => 'Well done is better than well said.',
+                'author' => 'Benjamin Franklin'
+            ],
+            [
+                'content' => 'Success is not final, failure is not fatal.',
+                'author' => 'Winston Churchill'
+            ],
+            [
+                'content' => 'Dream big and dare to fail.',
+                'author' => 'Norman Vaughan'
+            ],
+            [
+                'content' => 'Push yourself because no one else is going to do it for you.',
+                'author' => 'Unknown'
+            ],
+            [
+                'content' => 'Do something today that your future self will thank you for.',
+                'author' => 'Unknown'
+            ],
+            [
+                'content' => 'Small steps every day lead to big results.',
+                'author' => 'Unknown'
+            ],
+            [
+                'content' => 'Discipline is choosing between what you want now and what you want most.',
+                'author' => 'Abraham Lincoln'
+            ],
+            [
+                'content' => 'Your only limit is your mind.',
+                'author' => 'Unknown'
+            ]
+        ];
 
-        Quote::create([
-            'content' => 'Do not wait for an opportunity. Create it.',
-            'author' => null,
-        ]);
-
-        Quote::create([
-            'content' => 'Push yourself, because no one else is going to do it for you.',
-            'author' => null,
-        ]);
+        foreach ($quotes as $quote) {
+            Quote::create($quote);
+        }
     }
 }

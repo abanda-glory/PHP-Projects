@@ -65,6 +65,18 @@
             border-radius: 5px;
         }
 
+        .error-box {
+            background: #f8d7da;
+            color: #842029;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .error-box ul {
+            list-style: none;
+        }
+
         form input {
             width: 100%;
             padding: 10px;
@@ -85,6 +97,16 @@
 <body>
     <div class="container">
         <h1>Motivational Quote</h1>
+
+        @if ($errors->any())
+        <div class="error-box">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
 
         <!-- Form Submission Success Message-->
         @if(session('success'))
